@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewJeans Website</title>
+    <style>
+        body{
+            background-color: rgb(255, 255, 255); /* 배경색을 흰색으로 변경 */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header{
+            text-align: center;
+        }
+        .header img {
+            width: 300px; /* 이미지 크기를 조정할 수 있습니다 */
+            height: auto;
+            cursor: pointer;
+        }
+        .side{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+            box-sizing: border-box;
+        }
+        .side ul{
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+        }
+        .side ul li{
+            background-color: rgb(255, 255, 255); /* 배경색을 흰색으로 변경 */
+            color: blue; /* 텍스트 색상을 파란색으로 변경 */
+            padding: 10px;
+            margin: 2px;
+            cursor: pointer;
+            text-align: center;
+            flex: 1;
+        }
+        .side ul li:hover{
+            background-color: blue; /* 마우스를 올렸을 때 색상을 파란색으로 변경 */
+            color:rgb(255, 255, 255); /* 텍스트 색상을 흰색으로 변경 */
+        }
+        .adv{
+            width: 100%;
+            box-sizing: border-box;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-bottom: 80px;
+        }
+        .sub_bg{
+            width: 100%;
+            height: 100vh; /* 이미지의 세로 크기를 최대로 설정 */
+            background: url('단체2.jpg') 0 0 no-repeat; /* 배경 이미지를 새로 업로드한 이미지로 변경 */
+            background-size: cover;
+            background-attachment: fixed; /* 고정 배경 효과 */
+            position: relative;
+            animation: animate_background 20s linear infinite; /* 애니메이션 속도를 줄이기 위해 시간을 20초로 설정 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        .sub_bg h2{
+            color: white; /* 텍스트 색상을 흰색으로 변경 */
+            font-size: 5px;
+            text-align: center;
+            font-weight: 500;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .sub_bg h2 span{
+            display: block;
+            font-size: 20px;
+        }
+        @keyframes animate_background{
+            0% {background-position: 0% 0%;}
+            50% {background-position: 0% 100%;}
+            100% {background-position: 0% 0%;}
+        }
+        .form-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+        .form-container label {
+            color: white; /* 텍스트 색상을 흰색으로 변경 */
+            font-size: 16px;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="password"] {
+            margin: 5px 0;
+            padding: 5px;
+            font-size: 16px;
+            color: rgb(255, 0, 0); /* 입력 필드 텍스트 색상 */
+            background-color: white; /* 입력 필드 배경 색상 */
+            border: 1px solid blue;
+        }
+        .form-container input[type="button"] {
+            margin-top: 10px;
+            padding: 5px 10px;
+            font-size: 16px;
+            background-color: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            display: block;
+            margin: 20px auto 0; /* 중앙 정렬 */
+            margin-bottom: 20px;
+        }
+        .form-container input[type="button"]:hover {
+            background-color: red
+        }
+        .footer {
+            text-align: center;
+            padding: 10px;
+            background-color: rgb(255, 255, 255); /* 배경색을 흰색으로 설정 */
+            color: blue; /* 텍스트 색상을 파란색으로 설정 */
+        }
+       
+        @media screen and (max-width: 500px){
+            .side ul{
+                flex-direction: column;
+                align-items: center;
+            }
+            .side ul li{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="기말.html">
+            <img src="로고.jpg" alt="NewJeans Logo">
+        </a>
+    </div>    
+    <div class="side">
+        <ul>
+            <li onclick="location.href='MINJI.html'">MINJI</li>
+            <li onclick="location.href='HANNI.html'">HANNI</li>
+            <li onclick="location.href='DANIELLE.html'">DANIELLE</li>
+            <li onclick="location.href='HAERIN.html'">HAERIN</li>
+            <li onclick="location.href='HYEIN.html'">HYEIN</li>
+        </ul>
+    </div>
+    <div class="sub_bg adv">
+        <h2><span></span></h2><Br>
+            <h2><span></span></h2>
+        <h2><span>NewJeans Don't Be Blue</span></h2>
+        
+        <div class="form-container">
+            <form action="input.jsp" method="post">
+                <label for="id">ID:</label>
+                <input type="text" id="id" size="16" value=""><br>
+                <label for="password">PW:</label>
+                <input type="password" id="password" size="15" value=""><br>
+                <input type="button" value="Submit" onclick="alert('Welcome, Bunnies!')">
+            </form>
+        </div>
+    </div>
+    
+    <div class="footer">
+        ©2021 ADOR. All rights Reserved. | <a href="#" style="color: blue;">Privacy Policy</a>
+    </div>
+</body>
+</html>
+
+
+
+
+
+
